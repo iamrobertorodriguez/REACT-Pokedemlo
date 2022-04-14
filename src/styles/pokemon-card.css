@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'pokemon_gbregular';
+    src: url('../assets/fonts/pokemon_gb/pokemon_gb-webfont.woff2') format('woff2'),
+         url('../assets/fonts/pokemon_gb/pokemon_gb-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.pokemon-card {
+    align-items: center;
+    font-family: 'pokemon_gbregular';
+    list-style: none;
+    display: flex;
+    width: 100%;
+    height: 230px;
+    margin: auto;
+    justify-content: center;
+}
+
+.pokemon-card-part1 {
+    width: 20%;
+    height: 100%;
+    border-top: 2px solid black;
+    border-right: 2px solid rgb(174,135,213);
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    -webkit-box-shadow: 0px 0px 21px 1px #000000; 
+    box-shadow: 0px 0px 21px 1px #000000;
+    transition-property: width;
+    transition-duration: 300ms;
+}
+
+.pokemon-card:hover .pokemon-card-part1 {
+    width: 30%;
+}
+
+.pokemon-card-part1>div {
+    width: 100%;
+    height: 100%;
+    background-color: RGB(92, 15, 171);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 8px;
+}
+
+.pokemon-card-part1>div>img {
+    height: 100%;
+}
+
+.pokemon-card-part2 {
+    width: 70%;
+    height: 100%;
+    padding: 1rem;
+    background-color: whitesmoke;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    -webkit-box-shadow: 7px 0px 21px 1px #000000; 
+    box-shadow: 7px 0px 21px 1px #000000;
+}
+
+.pokemon-card-part2>p:first-child {
+    text-align: end;
+}
+
+.pokemon-card-part2>h3 {
+    text-align: start;
+}
+
+.pokemon-card-part2>p {
+    text-align: start;
+}
+
+.pokemon-card-part2>.view-more {
+    text-align: end;
+    text-decoration: none;
+    transition-property: letter-spacing, color;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.pokemon-card-part2>.view-more:hover {
+    letter-spacing: 5px;
+    color: red;
+}
+
+@media only screen and ( min-width: 600px ) {
+
+    .pokemon-card {
+        width: 500px;
+    }
+}

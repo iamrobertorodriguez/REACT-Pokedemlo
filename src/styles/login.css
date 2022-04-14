@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'pocket_monkregular';
+    src: url('../assets/fonts/pocket_monk/pocket_monk-webfont.woff2') format('woff2'),
+         url('../assets/fonts/pocket_monk/pocket_monk-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.login-screen {
+    font-family: 'pocket_monkregular';
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(
+        to right, #c01e13, #5c0fab, #ffcc00, #336ddb
+    );
+    background-size: 500%;
+    animation: animate-background 10s infinite ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+#pokeball-vector {
+    position: absolute;
+    z-index: 1;
+    top: -170px;
+    right: -170px;
+    height: 60vh;
+    width: 60vh;
+    background-image: url( '../assets/sprites/pokeball-vector.png' );
+    background-size: contain;
+    animation: spin 5s infinite linear;
+}
+
+.login-screen>h1 {
+    font-size: 64px;
+    color: RGB(255, 204, 1);
+    text-shadow: rgb(49, 101, 175) 5px 0px 0px, rgb(49, 101, 175) 4.90033px 0.993347px 0px, rgb(49, 101, 175) 4.60531px 1.94709px 0px, rgb(49, 101, 175) 4.12668px 2.82321px 0px, rgb(49, 101, 175) 3.48353px 3.58678px 0px, rgb(49, 101, 175) 2.70151px 4.20736px 0px, rgb(49, 101, 175) 1.81179px 4.6602px 0px, rgb(49, 101, 175) 0.849836px 4.92725px 0px, rgb(49, 101, 175) -0.145998px 4.99787px 0px, rgb(49, 101, 175) -1.13601px 4.86924px 0px, rgb(49, 101, 175) -2.08073px 4.54649px 0px, rgb(49, 101, 175) -2.94251px 4.04248px 0px, rgb(49, 101, 175) -3.68697px 3.37732px 0px, rgb(49, 101, 175) -4.28444px 2.57751px 0px, rgb(49, 101, 175) -4.71111px 1.67494px 0px, rgb(49, 101, 175) -4.94996px 0.7056px 0px, rgb(49, 101, 175) -4.99147px -0.291871px 0px, rgb(49, 101, 175) -4.83399px -1.27771px 0px, rgb(49, 101, 175) -4.48379px -2.2126px 0px, rgb(49, 101, 175) -3.95484px -3.05929px 0px, rgb(49, 101, 175) -3.26822px -3.78401px 0px, rgb(49, 101, 175) -2.4513px -4.35788px 0px, rgb(49, 101, 175) -1.53666px -4.75801px 0px, rgb(49, 101, 175) -0.560763px -4.96845px 0px, rgb(49, 101, 175) 0.437495px -4.98082px 0px, rgb(49, 101, 175) 1.41831px -4.79462px 0px, rgb(49, 101, 175) 2.34258px -4.41727px 0px, rgb(49, 101, 175) 3.17346px -3.86382px 0px, rgb(49, 101, 175) 3.87783px -3.15633px 0px, rgb(49, 101, 175) 4.4276px -2.32301px 0px, rgb(49, 101, 175) 4.80085px -1.39708px 0px, rgb(49, 101, 175) 4.98271px -0.415447px 0px;
+    margin: 2rem;
+    position: static;
+    z-index: 100;
+}
+
+.login-screen>form {
+    position: static;
+    z-index: 100;
+}
+
+.login-screen>form>input {
+    margin: 1rem auto;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'pocket_monkregular';
+    background-color: transparent;
+    border: 0px;
+    outline: none;
+    border-bottom: 5px solid #5c0fab;
+    
+}
+
+.login-screen>form>button {
+    border: 2px solid black;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 10px;
+    font-size: 32px;
+    font-family: 'pocket_monkregular';
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    transition-property: border, background-color, color;
+    transition-duration: 200ms;
+}
+
+.login-screen>form>button:hover {
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+}
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+@keyframes animate-background {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}

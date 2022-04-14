@@ -1,38 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+
+@font-face {
+    font-family: 'pocket_monkregular';
+    src: url('./assets/fonts/pocket_monk/pocket_monk-webfont.woff2') format('woff2'),
+         url('./assets/fonts/pocket_monk/pocket_monk-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .App {
-  text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(208, 189, 243);
+    background-image: url( './assets/background/pokemon-screen.png' );
+    background-size: contain;
+    background-attachment: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#app-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: 'pocket_monkregular', 'Roboto';
+    background-color: RGB(51, 109, 219);
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 21px 1px #000000; 
+    box-shadow: 0px 0px 21px 1px #000000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#app-nav:hover {
+    cursor: default;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#app-nav>h1 {
+    font-size: 40px;
+    text-align: center;
+    padding: 1rem;
+    color: RGB(255, 204, 1);
+    text-shadow: rgb(49, 101, 175) 5px 0px 0px, rgb(49, 101, 175) 4.90033px 0.993347px 0px, rgb(49, 101, 175) 4.60531px 1.94709px 0px, rgb(49, 101, 175) 4.12668px 2.82321px 0px, rgb(49, 101, 175) 3.48353px 3.58678px 0px, rgb(49, 101, 175) 2.70151px 4.20736px 0px, rgb(49, 101, 175) 1.81179px 4.6602px 0px, rgb(49, 101, 175) 0.849836px 4.92725px 0px, rgb(49, 101, 175) -0.145998px 4.99787px 0px, rgb(49, 101, 175) -1.13601px 4.86924px 0px, rgb(49, 101, 175) -2.08073px 4.54649px 0px, rgb(49, 101, 175) -2.94251px 4.04248px 0px, rgb(49, 101, 175) -3.68697px 3.37732px 0px, rgb(49, 101, 175) -4.28444px 2.57751px 0px, rgb(49, 101, 175) -4.71111px 1.67494px 0px, rgb(49, 101, 175) -4.94996px 0.7056px 0px, rgb(49, 101, 175) -4.99147px -0.291871px 0px, rgb(49, 101, 175) -4.83399px -1.27771px 0px, rgb(49, 101, 175) -4.48379px -2.2126px 0px, rgb(49, 101, 175) -3.95484px -3.05929px 0px, rgb(49, 101, 175) -3.26822px -3.78401px 0px, rgb(49, 101, 175) -2.4513px -4.35788px 0px, rgb(49, 101, 175) -1.53666px -4.75801px 0px, rgb(49, 101, 175) -0.560763px -4.96845px 0px, rgb(49, 101, 175) 0.437495px -4.98082px 0px, rgb(49, 101, 175) 1.41831px -4.79462px 0px, rgb(49, 101, 175) 2.34258px -4.41727px 0px, rgb(49, 101, 175) 3.17346px -3.86382px 0px, rgb(49, 101, 175) 3.87783px -3.15633px 0px, rgb(49, 101, 175) 4.4276px -2.32301px 0px, rgb(49, 101, 175) 4.80085px -1.39708px 0px, rgb(49, 101, 175) 4.98271px -0.415447px 0px;
 }
 
-.App-link {
-  color: #61dafb;
+#nav-shadow1 {
+    background-color: RGB(41, 90, 183);
+    height: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#nav-shadow2 {
+    background-color: RGB(23, 65, 141);
+    height: 4px;
+}
+
+#app-footer {
+    width: 100%;
+    position: sticky;
+    bottom: -105px;
+    background-color: RGB(51, 109, 219);
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 21px 1px #000000; 
+    box-shadow: 0px 0px 21px 1px #000000;
+    font-family: 'Lato', sans-serif;
+}
+
+#footer-info {
+    padding: 1rem 0;
 }

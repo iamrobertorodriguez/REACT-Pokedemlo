@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'pokemon_gbregular';
+    src: url('../assets/fonts/pokemon_gb/pokemon_gb-webfont.woff2') format('woff2'),
+         url('../assets/fonts/pokemon_gb/pokemon_gb-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.pagination>p {
+    margin: 3rem auto;
+    margin-bottom: 0;
+    background-color: whitesmoke;
+    display: inline-block;
+    padding: .5rem 2rem;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.pagination>.pages {
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pagination>.pages>button {
+    font-family: 'pokemon_gbregular';
+    padding: .1rem;
+    margin: .1rem;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: black;
+}
+
+.pagination>.pages>button:hover {
+    background-color: RGB(92, 15, 171);
+    color: white;
+    cursor: pointer;
+}

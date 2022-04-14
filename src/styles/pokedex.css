@@ -1,0 +1,214 @@
+@font-face {
+    font-family: 'pokemon_gbregular';
+    src: url('../assets/fonts/pokemon_gb/pokemon_gb-webfont.woff2') format('woff2'),
+         url('../assets/fonts/pokemon_gb/pokemon_gb-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pocket_monkregular';
+    src: url('../assets/fonts/pocket_monk/pocket_monk-webfont.woff2') format('woff2'),
+         url('../assets/fonts/pocket_monk/pocket_monk-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.pokedex-screen {
+    width: 100vw;
+    min-height: 100vh;
+    font-family: 'pokemon_gbregular';
+}
+
+.pokedex {
+    padding: 1rem;
+    text-align: center;
+}
+
+.pokedex>h2 {
+    font-size: 50px;
+    color: RGB(255, 204, 1);
+    text-shadow: black 5px 0px 0px, black 4.90033px 0.993347px 0px, black 4.60531px 1.94709px 0px, black 4.12668px 2.82321px 0px, black 3.48353px 3.58678px 0px, black 2.70151px 4.20736px 0px, black 1.81179px 4.6602px 0px, black 0.849836px 4.92725px 0px, black -0.145998px 4.99787px 0px, black -1.13601px 4.86924px 0px, black -2.08073px 4.54649px 0px, black -2.94251px 4.04248px 0px, black -3.68697px 3.37732px 0px, black -4.28444px 2.57751px 0px, black -4.71111px 1.67494px 0px, black -4.94996px 0.7056px 0px, black -4.99147px -0.291871px 0px, black -4.83399px -1.27771px 0px, black -4.48379px -2.2126px 0px, black -3.95484px -3.05929px 0px, black -3.26822px -3.78401px 0px, black -2.4513px -4.35788px 0px, black -1.53666px -4.75801px 0px, black -0.560763px -4.96845px 0px, black 0.437495px -4.98082px 0px, black 1.41831px -4.79462px 0px, black 2.34258px -4.41727px 0px, black 3.17346px -3.86382px 0px, black 3.87783px -3.15633px 0px, black 4.4276px -2.32301px 0px, black 4.80085px -1.39708px 0px, black 4.98271px -0.415447px 0px;
+
+}
+
+.cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cards-list>li {
+    list-style: none;
+}
+
+.filters {
+    background-color: whitesmoke;
+    margin: 2rem auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 21px 1px #000000; 
+    box-shadow: 0px 0px 21px 1px #000000;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.filters:hover .panel1 {
+  background-color: black;
+  border-right: 2px solid black;
+}
+
+.filters:hover .panel2 {
+  background-color: black;
+  border-left: 2px solid black;
+}
+
+.filters:hover #pokemons-per-page::-webkit-slider-thumb {
+  background: #5c0fab;
+}
+
+.filters>.panel1 {
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 8px;
+    background-color: RGB(192, 30, 19);
+    height: 130px;
+    width: 10%;
+    border-right: 2px solid RGB(207, 127, 146);
+    transition-property: background-color, border;
+    transition-duration: 300ms;
+}
+
+.filters>.panel2 {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: RGB(192, 30, 19);
+    height: 130px;
+    width: 10%;
+    border-left: 2px solid RGB(207, 127, 146);
+    transition-property: background-color, border;
+    transition-duration: 300ms;
+}
+
+.filters>.content {
+    width: 80%;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content select {
+    font-family: 'pokemon_gbregular';
+    padding: .5rem 1rem;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-radius: 10px;
+    max-width: 90%;
+}
+
+#pokemons-per-page {
+    height: 16px;
+    -webkit-appearance: none;
+    margin: 1rem 0;
+    width: 50%;
+    background-color: transparent;
+  }
+  #pokemons-per-page:focus {
+    outline: none;
+  }
+  #pokemons-per-page::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000;
+    background: #FFFFFF;
+    border-radius: 5px;
+    border: 1px solid #000000;
+  }
+  #pokemons-per-page::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000;
+    border: 1px solid #000000;
+    height: 30px;
+    width: 15px;
+    border-radius: 5px;
+    background: RGB(192, 30, 19);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -11px;
+    transition-property: background-color;
+    transition-duration: 300ms;
+  }
+  #pokemons-per-page:focus::-webkit-slider-runnable-track {
+    background: #FFFFFF;
+  }
+  #pokemons-per-page::-moz-range-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000;
+    background: #FFFFFF;
+    border-radius: 5px;
+    border: 1px solid #000000;
+  }
+  #pokemons-per-page::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000;
+    border: 1px solid #000000;
+    height: 30px;
+    width: 15px;
+    border-radius: 5px;
+    background: RGB(192, 30, 19);
+    cursor: pointer;
+  }
+  #pokemons-per-page::-ms-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  #pokemons-per-page::-ms-fill-lower {
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px #000000;
+  }
+  #pokemons-per-page::-ms-fill-upper {
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px #000000;
+  }
+  #pokemons-per-page::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 1px 1px 1px #000000;
+    border: 1px solid #000000;
+    height: 30px;
+    width: 15px;
+    border-radius: 5px;
+    background: RGB(192, 30, 19);
+    cursor: pointer;
+  }
+  #pokemons-per-page:focus::-ms-fill-lower {
+    background: #FFFFFF;
+  }
+  #pokemons-per-page:focus::-ms-fill-upper {
+    background: #FFFFFF;
+  }
+
+@media only screen and ( min-width: 600px ) {
+    
+    .cards-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #waving {
+        margin: auto;
+    }
+}
