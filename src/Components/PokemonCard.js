@@ -19,7 +19,7 @@ const PokemonCard = ( { url } ) => {
             <div className="pokemon-card">
                 <div className="pokemon-card-part1">
                     <div>
-                        <img src={ pokemonInfo.sprites.front_default } alt={`${ pokemonInfo.name } image`} />
+                        <img src={ pokemonInfo.sprites.front_default } alt={ pokemonInfo.name } />
                     </div>
                 </div>
                 <div className="pokemon-card-part2" >
